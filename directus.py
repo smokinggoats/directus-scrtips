@@ -8,6 +8,7 @@ from requests import get, patch, post
 
 load_dotenv()
 
+
 class Movie:
     id: str
     status: str
@@ -179,6 +180,26 @@ def create_item(imdb_id: str, rating: str, last_watched: str):
                 "personal_rating": rating,
                 "watched": True,
                 "watched_at": [last_watched],
+            }
+        )
+    log(f"FETCH_DETAILS {imdb_id}")
+    fetch_movie_details(item.id, rating=rating)
+    log(f"FETCH_POSTER {imdb_id}")
+    fetch_poster_image(item.id)
+
+
+def import_movie(imdb_id: str, date: str, rating: str):
+    log = logger("IMPORT_MOVIE")
+    item = directus_find_item_imdb_id(imdb_id)
+    if item is None:
+        log(f"POST_ITEM {imdb_id}")
+        item = directus_post_item(
+            {
+                "imdb_id": imdb_id,
+                "watched": True,
+                "personal_rating": rating,
+                "watched_at": [date],
+                "last_watched": date,
             }
         )
     log(f"FETCH_DETAILS {imdb_id}")

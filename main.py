@@ -1,8 +1,13 @@
-from directus import directus_get_items_filter, update_last_watched
+import argparse
+
+from directus import import_movie
+
+parser = argparse.ArgumentParser("simple_example")
+parser.add_argument("imdb_id", help="tt\d+", type=str)
+parser.add_argument("date", help="", type=str)
+parser.add_argument("rating", help="", type=str)
 
 if __name__ == "__main__":
-    for v in directus_get_items_filter("[last_watched][_nnull]")[0:2]:
-        if v:
-            update_last_watched(v.imdb_id)
-        else:
-            print(v)
+    args = parser.parse_args()
+    print(args)
+    import_movie(args.imdb_id, args.date, args.rating)
