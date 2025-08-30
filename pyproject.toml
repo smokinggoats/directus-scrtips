@@ -1,0 +1,12 @@
+[project]
+name = "directus-scripts"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anytype-client>=0.2.1",
+    "markdown>=3.8.2",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+]
