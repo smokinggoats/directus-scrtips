@@ -61,8 +61,8 @@ def directus_get_item(item_id: str) -> Movie:
         url=API_ITEM,
         headers=HEADERS,
     )
-    item_data = rItem.json().get("data")
-    return Movie(item_data)
+    item_data = rItem.json()
+    return Movie(item_data.get("data"))
 
 
 def directus_get_items_filter(filter: str) -> list[Movie]:
@@ -153,7 +153,7 @@ def fetch_movie_details(item_id: str, rating: str = None):
 
 def fetch_poster_image(item_id: str):
     log = logger("FETCH_POSTER")
-    item_data = directus_get_item(item_id)
+    item_data = directus_find_item_imdb_id(item_id)
     if not item_data.poster_image:
         log(f"started for {item_id}")
         poster_url = item_data.poster
@@ -164,7 +164,7 @@ def fetch_poster_image(item_id: str):
             directus_update_item(item_id, {"poster_image": poster_file.get("id")})
             log(f"updated {item_id}")
         else:
-            log("no poste found")
+            log("no poster found")
     else:
         log("no poster to update")
 
