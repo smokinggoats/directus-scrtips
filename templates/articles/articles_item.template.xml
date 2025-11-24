@@ -1,0 +1,14 @@
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xml:lang="en" version="2.0">
+    <item>
+        <title><![CDATA[test 001]]></title>
+        <description><![CDATA[<p>test</p>]]></description>
+        <link>https://rss.com/podcasts/smoking-goats/2339137</link>
+        <enclosure
+            url="https://content.rss.com/episodes/356546/2339137/smoking-goats/2025_11_20_20_14_58_90c5de8d-a772-41c0-9c32-33bd0649417a.mp3"
+            length="3356864" type="audio/mpeg" />
+        <guid isPermaLink="false">971299a9-8b28-4d78-8313-0bc23a139eea</guid>
+        <pubDate>Thu, 20 Nov 2025 20:22:40 GMT</pubDate>
+    </item>
+</rss>

@@ -1,0 +1,37 @@
+<rss xmlns:podcast="https://podcastindex.org/namespace/1.0"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:psc="http://podlove.org/simple-chapters" 
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xml:lang="en" version="2.0">
+    <item>
+        <title><![CDATA[test 001]]></title>
+        <itunes:title><![CDATA[test 001]]></itunes:title>
+        <description><![CDATA[<p>test</p>]]></description>
+        <link>https://rss.com/podcasts/smoking-goats/2339137</link>
+        <enclosure
+            url="https://content.rss.com/episodes/356546/2339137/smoking-goats/2025_11_20_20_14_58_90c5de8d-a772-41c0-9c32-33bd0649417a.mp3"
+            length="3356864" type="audio/mpeg" />
+        <guid isPermaLink="false">971299a9-8b28-4d78-8313-0bc23a139eea</guid>
+        <itunes:duration>209</itunes:duration>
+        <itunes:episodeType>full</itunes:episodeType>
+        <itunes:season>1</itunes:season>
+        <podcast:season>1</podcast:season>
+        <itunes:episode>1</itunes:episode>
+        <podcast:episode>1</podcast:episode>
+        <itunes:explicit>false</itunes:explicit>
+        <pubDate>Thu, 20 Nov 2025 20:22:40 GMT</pubDate>
+        <itunes:image
+            href="https://media.rss.com/smoking-goats/ep_cover_20251120_081153_272ae421b0b79bfaf1236c1638754231.png" />
+        <podcast:chapters url="https://apollo.rss.com/chapters/2339137"
+            type="application/json+chapters" />
+        <psc:chapters>
+            <psc:chapter start="0" title="ch1"
+                image="https://media.rss.com/smoking-goats/20251120_081102_4aaca1d7115f0c8fd4d05296dbee00b7.jpg" />
+            <psc:chapter start="1:40" title="ch02"
+                image="https://media.rss.com/smoking-goats/20251120_081132_56a877f1d53bc637bcbb68d5f9477b33.png" />
+        </psc:chapters>
+        <podcast:location rel="creator" geo="geo:-23.5506507,-46.6333824" osm="R298285"
+            country="br">São Paulo, Região Metropolitana de São Paulo, São Paulo, Brazil</podcast:location>
+    </item>
+</rss>

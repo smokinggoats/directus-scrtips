@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://media.rss.com/style.xsl"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom"
+    xml:lang="en" version="2.0">
+    <channel>
+        <title>{{PODCAST_TITLE}}</title>
+        <link>{{PODCAST_LINK}}</link>
+        <atom:link href="{{PODCAST_FEED_URL}}" rel="self"
+            type="application/rss+xml" />
+        <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+        <description>{{PODCAST_DESCRIPTION}}</description>
+        <generator>{{FEED_GENERATOR_TEXT}}</generator>
+        <lastBuildDate>{{FEED_LAST_GENERATED_DATE}}</lastBuildDate>
+        <language>{{PODCAST_LANGUAGE}}</language>
+        <image>
+            <url>{{PODCAST_PROFILE_IMAGE}}</url>
+            <title>{{PODCAST_NAME}}</title>
+            <link>https://rss.com/podcasts/smoking-goats</link>
+        </image>
+    </channel>
+</rss>
