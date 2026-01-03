@@ -1,11 +1,12 @@
 from flask import Flask, abort, request
+from flask_cors import CORS
 import json
 from datetime import datetime
 from directus import fetch_poster_image, import_movie
 
 # create a Flask instance
 app = Flask(__name__)
-
+CORS(app, origins='*')
 
 @app.route("/ping", methods=["GET"])
 def ping():
