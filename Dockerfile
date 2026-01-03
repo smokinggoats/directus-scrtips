@@ -20,4 +20,4 @@ RUN uv sync --frozen
 ENTRYPOINT []
 
 # CMD ["uv", "run", "main.py"]
-CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:5000", "--access-logfile", "-", "--error-logfile","-", "main:app"]
