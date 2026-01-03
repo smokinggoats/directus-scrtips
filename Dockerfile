@@ -14,8 +14,10 @@ ENV UV_TOOL_BIN_DIR=/usr/local/bin
 COPY . /app
 RUN uv sync --locked --no-install-project --no-dev
 RUN uv sync --locked --no-dev
+RUN uv sync --frozen
 
 # Reset the entrypoint, don't invoke `uv`
 ENTRYPOINT []
 
-CMD ["uv", "run", "main.py"     ]
+# CMD ["uv", "run", "main.py"]
+CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
