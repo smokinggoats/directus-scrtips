@@ -45,6 +45,7 @@ class Movie:
 AUTH_HEADER = f"Bearer {getenv('DIRECTUS_AUTH_HEADER')}"
 CONTENT_TYPE = "application/json"
 API_HOST = getenv("DIRECTUS_API_HOST")
+OMDB_API_KEY = getenv("OMDB_API_KEY")
 
 API_LIST_ITEMS = f"{API_HOST}/items/movies"
 
@@ -115,7 +116,7 @@ def fetch_movie_details(item_id: str, rating: str = None):
     item_data = directus_get_item(item_id)
     imdb_id = item_data.imdb_id
     log(f"fetching {imdb_id}")
-    rMovie = get(url=f"http://www.omdbapi.com/?apikey=1310878&i={imdb_id}")
+    rMovie = get(url=f"http://www.omdbapi.com/?apikey={OMDB_API_KEY}&i={imdb_id}")
     movie_data = rMovie.json()
 
     has_poster = movie_data.get("Poster") == "N/A" or item_data.poster is not None
